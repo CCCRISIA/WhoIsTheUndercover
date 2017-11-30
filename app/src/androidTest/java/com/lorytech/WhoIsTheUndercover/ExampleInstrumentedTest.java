@@ -1,4 +1,4 @@
-package com.lorytech.myapplication;
+package com.lorytech.WhoIsTheUndercover;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,3 +1,15 @@
 <resources>
+    <!--APP-->
     <string name="app_name">谁是卧底</string>
+
+    <!--配置-->
+    <string name="setting">游戏配置:</string>
+    <string name="playerNum">玩家人数：</string>
+    <string name="startGame">开始游戏</string>
+    <string name="blankCard">添加白板：</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+
+
+
 </resources>

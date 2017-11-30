@@ -1,19 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lorytech.myapplication.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting"
+            android:textColor="@color/black"
+            android:textSize="25dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/playerNum"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="226dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入玩家人数"
+            android:maxLength="2"
+            android:maxLines="1"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="建议玩家人数≥4"
+            app:met_primaryColor="#0056d3"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_margin="30dp"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blankCard"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/btn_no">
+
+            <RadioButton
+                android:id="@+id/btn_yes"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:textColor="@color/gray"
+                android:text="@string/yes"
+                android:textSize="18dp"/>
+
+            <RadioButton
+                android:id="@+id/btn_no"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/gray"
+                android:text="@string/no"
+                android:textSize="18dp"/>
+
+        </RadioGroup>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp">
+
+
+        <Button
+            android:id="@+id/btn_startScan_codepacking"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border_btn"
+            android:text="@string/startGame"
+            android:textColor="@color/white"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.lorytech.myapplication;
+package com.lorytech.WhoIsTheUndercover;
 
 import org.junit.Test;
 

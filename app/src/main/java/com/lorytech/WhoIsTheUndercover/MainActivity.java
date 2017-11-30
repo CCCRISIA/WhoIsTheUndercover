@@ -1,4 +1,4 @@
-package com.lorytech.myapplication;
+package com.lorytech.WhoIsTheUndercover;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
