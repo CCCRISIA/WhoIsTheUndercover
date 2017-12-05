@@ -5,11 +5,17 @@
     <!--配置-->
     <string name="setting">游戏配置:</string>
     <string name="playerNum">玩家人数：</string>
+    <string name="playerTip">请输入玩家人数</string>
+    <string name="playerRec">建议玩家人数≥4</string>
     <string name="startGame">开始游戏</string>
     <string name="blankCard">添加白板：</string>
     <string name="yes">是</string>
     <string name="no">否</string>
 
+    <!--游戏-->
+    <string name="forget">忘词了</string>
+    <string name="userName">1号玩家</string>
+    <string name="userlist">玩家列表：</string>
 
 
 </resources>

@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 android {
     compileSdkVersion 25
@@ -41,6 +42,13 @@ dependencies {
 
     /* Android-Bootstrap */
     implementation 'com.beardedhen:androidbootstrap:2.3.1'
+    /* SVProgressHUD For Android 精仿iOS的提示库 SVProgressHUD，api也几乎一样*/
+    implementation 'com.bigkoo:svprogresshud:1.0.6'
+
+    /*
+    * greenDAO is a light & fast ORM for Android that maps objects to SQLite databases.
+    * Being highly optimized for Android, greenDAO offers great performance and consumes minimal memory.*/
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
 
 
 

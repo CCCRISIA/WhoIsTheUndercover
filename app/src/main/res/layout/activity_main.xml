@@ -34,13 +34,14 @@
             android:textSize="20dp"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/playerNum"
             android:layout_width="226dp"
             android:layout_height="wrap_content"
-            android:hint="请输入玩家人数"
-            android:maxLength="2"
+            android:hint="@string/playerTip"
+            android:maxLength="1"
             android:maxLines="1"
             app:met_floatingLabel="highlight"
-            app:met_floatingLabelText="建议玩家人数≥4"
+            app:met_floatingLabelText="@string/playerRec"
             app:met_primaryColor="#0056d3"/>
 
 
@@ -61,6 +62,7 @@
             android:textSize="20dp"/>
 
         <RadioGroup
+            android:id="@+id/radio_blank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -97,7 +99,7 @@
 
 
         <Button
-            android:id="@+id/btn_startScan_codepacking"
+            android:id="@+id/btn_startGame"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/border_btn"
