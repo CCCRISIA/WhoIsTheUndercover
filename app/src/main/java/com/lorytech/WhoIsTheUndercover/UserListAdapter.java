@@ -25,7 +25,7 @@ public class UserListAdapter extends BaseAdapter {
     private Context context;
 
     // 初始化自定义适配器
-    public UserListAdapter(Context context, List<Map<String, Object>> codedata) {
+    public UserListAdapter(Context context, List<Map<String, Object>> codedata, MyClickListener mListener) {
         this.context = context;
         this.codedata = codedata;
         this.mListener = mListener;
@@ -65,9 +65,46 @@ public class UserListAdapter extends BaseAdapter {
         }
 
         // 装配代码
-        viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家：" +  codedata.get(position).get("userWord").toString().trim());
+        viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家");
 
         viewHolder.btnOperate.setOnClickListener(mListener);
+
+        if(null != codedata.get(position).get("clicked") && codedata.get(position).get("clicked").toString().equals("true")){
+            viewHolder.btnOperate.setEnabled(false);
+            viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家（已查看）");
+        }
+
+        if(null != codedata.get(position).get("out") && codedata.get(position).get("out").toString().equals("true")){
+            viewHolder.btnOperate.setEnabled(false);
+            viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家（已淘汰）");
+        } else if(null != codedata.get(position).get("out") && codedata.get(position).get("out").toString().equals("false")){
+            viewHolder.btnOperate.setEnabled(true);
+            viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家");
+        }
+
+        if(null != codedata.get(position).get("isBlank") && codedata.get(position).get("isBlank").toString().equals("true")){
+            viewHolder.btnOperate.setEnabled(false);
+            viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家（白板）");
+        }
+
+        if(null != codedata.get(position).get("isUndercover") && codedata.get(position).get("isUndercover").toString().equals("true")){
+            viewHolder.btnOperate.setEnabled(false);
+            viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家（卧底）");
+        }
+
+        if(null != codedata.get(position).get("gameover") && codedata.get(position).get("gameover").toString().equals("true")){
+            viewHolder.btnOperate.setEnabled(false);
+            if(null != codedata.get(position).get("isBlank") && codedata.get(position).get("isBlank").toString().equals("true")){
+                viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家（白板）");
+
+            }else if(null != codedata.get(position).get("isUndercover") && codedata.get(position).get("isUndercover").toString().equals("true")){
+                viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家（卧底）");
+
+            } else {
+                viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家");
+            }
+        }
+
 
         viewHolder.btnOperate.setTag(position);
 

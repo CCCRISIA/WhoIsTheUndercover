@@ -4,7 +4,7 @@ apply plugin: 'org.greenrobot.greendao' // apply plugin
 android {
     compileSdkVersion 25
     defaultConfig {
-        applicationId "com.lorytech.myapplication"
+        applicationId "com.lorytech.WhoIsTheUndercover"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
@@ -49,6 +49,8 @@ dependencies {
     * greenDAO is a light & fast ORM for Android that maps objects to SQLite databases.
     * Being highly optimized for Android, greenDAO offers great performance and consumes minimal memory.*/
     implementation 'org.greenrobot:greendao:3.2.2' // add library
+    /* 欢迎页AppIntro*/
+    implementation 'com.github.apl-devs:appintro:v4.2.0'
 
 
 

@@ -74,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
         return match.matches();
     }
 
+    /*
+    * 初始化数据库
+    * */
     public void initDataBase(){
         DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(this, "words-db", null);
         DaoMaster daoMaster = new DaoMaster(devOpenHelper.getWritableDatabase());
