@@ -69,6 +69,9 @@ public class UserListAdapter extends BaseAdapter {
 
         viewHolder.btnOperate.setOnClickListener(mListener);
 
+        viewHolder.btnOperate.setEnabled(true);
+
+
         if(null != codedata.get(position).get("clicked") && codedata.get(position).get("clicked").toString().equals("true")){
             viewHolder.btnOperate.setEnabled(false);
             viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家（已查看）");
@@ -76,7 +79,7 @@ public class UserListAdapter extends BaseAdapter {
 
         if(null != codedata.get(position).get("out") && codedata.get(position).get("out").toString().equals("true")){
             viewHolder.btnOperate.setEnabled(false);
-            viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家（已淘汰）");
+            viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家（平民）");
         } else if(null != codedata.get(position).get("out") && codedata.get(position).get("out").toString().equals("false")){
             viewHolder.btnOperate.setEnabled(true);
             viewHolder.btnOperate.setText(codedata.get(position).get("userNo").toString().trim() + "号玩家");

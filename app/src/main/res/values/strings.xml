@@ -16,6 +16,9 @@
     <string name="forget">忘词了</string>
     <string name="userName">1号玩家</string>
     <string name="userlist">玩家列表：</string>
+    <string name="continueGame">继续游戏</string>
+    <string name="this1">本轮由</string>
+    <string name="this2">号玩家先发言</string>
 
 
 </resources>

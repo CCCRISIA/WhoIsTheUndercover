@@ -52,6 +52,10 @@ dependencies {
     /* 欢迎页AppIntro*/
     implementation 'com.github.apl-devs:appintro:v4.2.0'
 
+    implementation 'com.orhanobut:logger:2.1.1'
+
+    implementation 'com.afollestad.material-dialogs:core:0.9.4.5'
+
 
 
 }
