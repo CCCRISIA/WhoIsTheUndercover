@@ -30,14 +30,14 @@ public class StartGameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startgame);
-        mSVProgressHUD = new SVProgressHUD(this);
-        Bundle  extras=getIntent().getExtras();
-        playerNum = extras.getInt("playerNum");
-        blankNum = extras.getInt("isBlankCard");
-        clickedNum = 0;
-        undercoverNum = 1;
+        Bundle extras = getIntent().getExtras();
         totalNum = playerNum;
         userlist = (ListView) findViewById(R.id.userList);
+        blankNum = extras.getInt("isBlankCard");
+        playerNum = extras.getInt("playerNum");
+        clickedNum = 0;
+        undercoverNum = 1;
+        mSVProgressHUD = new SVProgressHUD(this);
         initUI();
     }
 
@@ -163,7 +163,7 @@ public class StartGameActivity extends AppCompatActivity {
                                     mSVProgressHUD.showInfoWithStatus("卧底胜利", SVProgressHUD.SVProgressHUDMaskType.Black);
                                     return;
                                 }
-                            }else {
+                            } else {
                                 userdata.get(position).put("isBlank", "true");
                                 UserListAdapter userListAdapter = new UserListAdapter(getApplicationContext(), userdata, mListener);
                                 userlist.setAdapter(userListAdapter);
