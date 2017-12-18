@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 
 import com.bigkoo.svprogresshud.SVProgressHUD;
+import com.blankj.utilcode.util.ActivityUtils;
+import com.blankj.utilcode.util.Utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Utils.init(getApplication());
 
         mSVProgressHUD = new SVProgressHUD(this);
         editText_playerNum = (EditText) findViewById(R.id.playerNum);
@@ -105,6 +108,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        ActivityUtils.finishAllActivities();
+        ActivityUtils.startHomeActivity();
+    }
 
 }
