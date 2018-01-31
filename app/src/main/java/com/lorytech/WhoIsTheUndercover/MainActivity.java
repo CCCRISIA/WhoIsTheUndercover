@@ -87,15 +87,18 @@ public class MainActivity extends AppCompatActivity {
 
         wordsDao = daoSession.getWordsDao();
         String wordsList =
-                "神雕侠侣,天龙八部;" +
-                "天天向上,非诚勿扰;" +
-                "勇往直前,全力以赴;" +
-                "鱼香肉丝,四喜丸子;" +
-                "麻婆豆腐,皮蛋豆腐;" +
-                "语无伦次,词不达意;" +
-                "鼠目寸光,井底之蛙;" +
-                "近视眼镜,隐形眼镜;" +
-                "美人心计,倾世皇妃;";
+                "汉堡包,肉夹馍;" +
+                "蜘蛛侠,蜘蛛精;" +
+                "鱼缸,浴缸;" +
+                "汤圆,丸子;" +
+                "哈密瓜,西瓜;" +
+                "牛奶,豆浆;" +
+                "保安,保镖;" +
+                "气泡,水泡;" +
+                "魔术师,魔法师;" +
+                "双胞胎,龙凤胎;" +
+                "大白兔,金丝猴;" +
+                "镜子,玻璃;";
         String[] group = wordsList.split(";");
         if (wordsDao.count() < 1){
             for (int i=0; i<group.length; i++) {
